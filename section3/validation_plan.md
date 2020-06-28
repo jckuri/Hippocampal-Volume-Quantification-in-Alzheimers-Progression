@@ -26,7 +26,7 @@ mean_dice: 0.8834084001422208<br/>
 mean_jaccard: 0.792622572904947
 
 Real-world performance is going to be estimated in a similar way that training performance was estimated.
-If doctors want to estimate the real-world performance of this software, they need to annotate the voxels with the hippocampal structures of many volumes in a testing dataset.
+If doctors want to estimate the real-world performance of this software, they need to annotate the voxels with the hippocampal structures of many "HippoCrop" volumes in a testing dataset.
 Then the Dice coefficient and the Jaccard metric can be computed. In that way, real-world performance can be measured.
 
 ## What data will the algorithm perform well in the real world and what data it might not perform well on?
