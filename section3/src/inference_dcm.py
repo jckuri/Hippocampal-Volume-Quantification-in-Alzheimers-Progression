@@ -42,8 +42,8 @@ def load_dicom_volume_as_numpy_from_list(dcmlist):
     """
     
     # In the real world you would do a lot of validation here
-    #slices = [np.flip(dcm.pixel_array).T for dcm in sorted(dcmlist, key=lambda dcm: dcm.InstanceNumber)]
-    slices = [dcm.pixel_array for dcm in sorted(dcmlist, key=lambda dcm: dcm.InstanceNumber)]
+    slices = [np.flip(dcm.pixel_array).T for dcm in sorted(dcmlist, key=lambda dcm: dcm.InstanceNumber)]
+    #slices = [dcm.pixel_array for dcm in sorted(dcmlist, key=lambda dcm: dcm.InstanceNumber)]
 
     # Make sure that you have correctly constructed the volume from your axial slices!
     hdr = dcmlist[0]
@@ -53,8 +53,8 @@ def load_dicom_volume_as_numpy_from_list(dcmlist):
     # first file (assuming that any instance-specific values will be ighored - common approach)
     # We also zero-out Pixel Data since the users of this function are only interested in metadata
     hdr.PixelData = None
-    #return (np.stack(slices, 2), hdr)
-    return (np.stack(slices, 0), hdr)
+    return (np.stack(slices, 2), hdr)
+    #return (np.stack(slices, 0), hdr)
 
 compute_volume_1 = lambda x: 1 if x == 1 else 0
 compute_volume_2 = lambda x: 1 if x == 2 else 0
