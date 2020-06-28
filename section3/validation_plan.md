@@ -2,7 +2,9 @@
 
 ## What is the intended use of the product?
 
-Hello
+This software is capable of quantifying the hippocampal volume of patients in order to keep track of their Alzheimer's progression.
+
+This software is not intended to replace doctors. It is rather intended to help doctors keep track of the progressions of their patients with Alzheimer disease. So that, this software will alleviate the work overall of doctors. Moreover, patients and their relatives can also see the reports of this software and be more aware of the progression of Alzheimer disease.
 
 ## How was the training data collected?
 
