@@ -20,8 +20,18 @@ The gold standard is not used here and consists in taking the MRI brain scans wi
 
 ## How was the training performance of the algorithm measured and how is the real-world performance going to be estimated?
 
-Hello
+The training performance was measured by using the Dice coefficient and the Jaccard metric. 
+
+mean_dice: 0.8834084001422208<br/>
+mean_jaccard: 0.792622572904947
+
+Real-world performance is going to be estimated in a similar way that training performance was estimated.
+If doctors want to estimate the real-world performance of this software, they need to annotate the voxels with the hippocampal structures of many volumes in a testing dataset.
+Then the Dice coefficient and the Jaccard metric can be computed. In that way, real-world performance can be measured.
 
 ## What data will the algorithm perform well in the real world and what data it might not perform well on?
 
-Hello
+Obviously this software is intended to work with relatively older people. This software is not designed for children.
+
+This software only works with "HippoCrop" volumes, in other words, parts of MRI brain scans which only contains the hippocampus.
+This software will not work well with entire MRI brain scans in which the volume contains all the parts of the brain.
